@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle-Bites - Recipes & Ingredients</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Mingle-Bites</h1>
+        <p>Explore Recipes & Buy Fresh Ingredients</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#recipes">Recipes</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#contact">Contact Us</a>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search Recipes & Ingredients...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="main-container">
+        
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <h3>Explore More</h3>
+            <ul>
+                <li><a href="#recent-recipes">Recently Added Recipes</a></li>
+                <li><a href="#seasonal-offers">Seasonal Offers</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <div class="content-container">
+            
+            <!-- Recipes Section -->
+            <div class="recipes" id="recipes">
+                <h2>Featured Recipes</h2>
+
+                <div class="recipe-card" data-name="Recipe Name 1">
+                    <img src="recipe1.jpg" alt="Recipe 1">
+                    <h3>Recipe Name 1</h3>
+                    <p>Short description of Recipe 1...</p>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipe-card" data-name="Recipe Name 2">
+                    <img src="recipe2.jpg" alt="Recipe 2">
+                    <h3>Recipe Name 2</h3>
+                    <p>Short description of Recipe 2...</p>
+                    <a href="#">View Recipe</a>
+                </div>
+            </div>
+
+            <!-- Ingredients Section -->
+            <div class="ingredients" id="ingredients">
+                <h2>Shop Ingredients</h2>
+
+                <div class="ingredient-card" data-name="Ingredient Name 1">
+                    <img src="ingredient1.jpg" alt="Ingredient 1">
+                    <h3>Ingredient Name 1</h3>
+                    <p>Fresh and organic...</p>
+                    <a href="#">Buy Now</a>
+                </div>
+
+                <div class="ingredient-card" data-name="Ingredient Name 2">
+                    <img src="ingredient2.jpg" alt="Ingredient 2">
+                    <h3>Ingredient Name 2</h3>
+                    <p>Organic and high-quality...</p>
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

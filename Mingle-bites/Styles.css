@@ -1,0 +1,135 @@
+/* Basic styles for structure */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #f8b400;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+nav {
+    background-color: #020122;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #f8b400;
+}
+.search-container {
+    display: inline-block;
+    margin-left: 20px;
+}
+.search-container input[type="text"] {
+    padding: 7px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+}
+.search-container button {
+    padding: 7px 15px;
+    background-color: #FFBA08;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.search-container button:hover {
+    background-color: #FF521B;
+}
+.main-container {
+    display: flex;
+    padding: 20px;
+}
+.sidebar {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+.sidebar ul li a {
+    color: #FFBA08;
+    text-decoration: none;
+}
+.sidebar ul li a:hover {
+    color: #FF521B;
+    font-weight: bold;
+}
+.content-container {
+    width: 75%;
+}
+.recipes, .ingredients {
+    margin-bottom: 20px;
+}
+.recipes h2, .ingredients h2 {
+    color: #032B43;
+}
+.recipe-card, .ingredient-card {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.recipe-card img, .ingredient-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+footer {
+    background-color: #020122;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
