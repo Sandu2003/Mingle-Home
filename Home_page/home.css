@@ -1,8 +1,7 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Fixed box-sizing */
+    box-sizing: border-box;
 }
 
 body, html {
@@ -46,7 +45,11 @@ body, html {
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center; /* Added default value */
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.395) 100%), url('../pics/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
 }
 
 .hero-image {
@@ -70,9 +73,15 @@ body, html {
 }
 
 .hero-content {
-    margin-left: 20px;  /* Increased the left margin to provide more space */
     display: flex;
-    align-items: center;  /* Ensures the content is aligned in the same row */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 5px;
+    z-index: 2;
 }
 
 .ver_line {
@@ -80,14 +89,17 @@ body, html {
     height: 250px;
     background-color: #EEF4ED;
     position: absolute;
-    left: 0; /* Adjust left position to align the line */
-    margin-right: 20px;  /* Adds space between the line and text */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
 }
 
 .hero-content h2 {
     font-size: 2.5em;
     font-weight: 300;
-    margin-left: 20px;  /* Adds some margin between the text and the vertical line */
+    margin-left: 20px;
+    
 }
 
 .hero-content h2 span {
@@ -96,37 +108,52 @@ body, html {
     display: flex;
 }
 
-
 .hero-content p {
-    margin-top: 10px; /* Added a default value */
     font-size: 1em;
-    color: #dddddd;
+    color: #EEF4ED;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-.info-button {
+.section-buttons-container {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+
+.Section-Button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #ffffff;
-    background-color: #e67e22;
+    background-color: #FFBA08;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     transition: background 0.3s;
 }
 
-.info-button:hover {
+.Section-Button:hover {
     background-color: #cf6d19;
+}
+
+.info-button:hover {
+    background-color: #FF521B;
 }
 
 .large-text {
     position: fixed;
-    bottom: 20px;
+    bottom: 5px;
     right: 50px;
     font-size: 20vw;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.217);
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff51;
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
 }
 
 .scroll-indicator {
@@ -142,6 +169,7 @@ footer {
     position: absolute;
     bottom: 20px;
     left: 40px;
+    z-index: 4;
 }
 
 .social-links a {
