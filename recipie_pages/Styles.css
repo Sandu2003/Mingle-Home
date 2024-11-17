@@ -104,16 +104,16 @@ header .line {
 
 .main {
     width: 100%;
-    background: #fff8e1; /* Warm, light background */
+    background: #fff8e1;
     height: auto;
-    margin: 20px auto; /* Add spacing around the container */
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px; /* Comfortable inner spacing */
-    border-radius: 12px; /* Slightly rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a clean look */
-    border: 1px solid #ffd59e; /* Soft border to enhance structure */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffd59e;
 }
 
 
@@ -221,9 +221,9 @@ footer {
     padding: 20px;
     width: 100%;
     display: flex;
-    flex-direction: ; /* Stack items vertically */
-    align-items: center;   /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    flex-direction: ;
+    align-items: center;
+    justify-content: center;
 }
 
 footer p {

@@ -1,0 +1,175 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 15px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 300px;
+    height: 300px;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #032B43;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #FFBA08;
+}
+
+.search-container {
+    justify-items: center;
+    align-items: left;
+}
+
+.search-container input[type="text"] {
+    padding: 7px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    margin-left: 800px;
+}
+
+.search-container button {
+    padding: 7px 15px;
+    background-color: #FFBA08;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #032B43;
+}
+
+header .line {
+    height: 4px;
+    width: 1220px;
+    background-color: #032B43;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.noodle-item {
+    text-align: center;
+    width: 350px;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .hover-text {
+    opacity: 1;
+}
+
+.hover-text a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.noodle-name {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+footer {
+    background-color: #020122;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #F7F7FF;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
