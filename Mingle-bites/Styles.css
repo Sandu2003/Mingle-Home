@@ -68,26 +68,73 @@ header .line {
     display: flex;
     padding: 20px;
 }
+
 .content-container {
     width: 75%;
+    display: flex;
 }
-.recipes, .ingredients {
-    margin-bottom: 20px;
+
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-.recipes h2, .ingredients h2 {
+
+.recipes h2 {
     color: #032B43;
+    width: 100%;
+    margin-bottom: 10px;
 }
-.recipe-card, .ingredient-card {
+
+.recipe-card {
+    position: relative;
     background-color: white;
     padding: 15px;
-    margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    overflow: hidden;
+    text-align: center;
+    flex: 0 0 auto;
 }
-.recipe-card img, .ingredient-card img {
+
+.recipe-card img {
     width: 100%;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
+
+.recipe-card:hover img {
+    transform: scale(1.1);
+}
+
+.recipe-card .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.recipe-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+.recipe-card .hover-overlay span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
 footer {
     background-color: #020122;
     color: white;
