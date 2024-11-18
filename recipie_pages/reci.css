@@ -145,9 +145,10 @@ header .line {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.intro-section p{
     text-align: center;
 }
-
 .intro-section img {
     margin-bottom: 5px;
     height: 60px;

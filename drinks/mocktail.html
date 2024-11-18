@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle-Bites - Recipes & Ingredients</title>
+    <link rel="stylesheet" href="../recipie_pages/reci.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search Recipes & Ingredients...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+        <div class="logo"><img src="../pics/Mingle.png" alt="logo" height="100px" width="100px"></div>
+        <nav>
+            <a href="../Mingle-bites/Mingle-bites.html">Home</a>
+            <a href="#recently-recepies">Recent Recipes</a>
+            <a href="#Seasonal foods">Seasonal Foods</a>
+            <a href="#Trendy foods">Trendy Foods</a>
+        </nav>
+        <div class="line"></div>
+    </header>
+
+    <div class="food-img">
+        <img src="drinks-pics/straw.jpg" alt="Strawberry Lemonade Mocktail">
+        <div class="text-overlay">Strawberry Lemonade Mocktail</div>
+    </div>
+
+    <div class="main">
+        <div class="recipe-container">
+            <div class="instructions">
+                <br>
+                <div>
+                    <img src="../pics/how.jpg" width="" alt="How to cook illustration">
+                </div>
+                <div class="intro-section">
+                    <div>
+                        <img src="../pics/time.jpg"  alt="Preparation time">
+                        <p>5 min</p>
+                    </div>
+                    <div>
+                        <img src="../pics/plate.png"  alt="Serving size">
+                        <p>1 serving</p>
+                    </div>
+                </div>
+                <h2>How to Make It</h2>
+                <p>
+                    -In a blender, combine all the ingredients for the strawberry syrup and process until smooth.<br>
+                    -Add the lemon juice to the sparkling water. Fill a glass with ice, <br>-then add some strawberry juice
+                    and lemon sparkling water on top.
+                </p>
+            </div>
+
+            <div class="middle-line"></div>
+
+            <div class="ingredients">
+                <div>
+                    <img src="../pics/ing.jpg" height="180px" alt="Ingredients illustration">
+                </div>
+                <h2>Ingredients</h2>
+                <ul>
+                    <p><strong>Strawberry Syrup</strong></p>
+                    <li>4 cups cut strawberries</li>
+                    <li>2 cups water</li>
+                    <li>1/4 cup honey</li>
+                    <br>
+                    <p><strong>Lemon Sparkling Water</strong></p>
+                    <li>1 cup fresh lemon juice</li>
+                    <li>3 cups sparkling water</li>
+                </ul>
+                <div class="go-to-mart">
+                    <p><b>Buy your missing ingredients from us Right Now!!!</b></p>
+                    <button onclick="scrollToMart()">Go to Mart 🛒</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/"></script>
+    <script>
+        // Scroll to Mart Section
+        function scrollToMart() {
+            document.getElementById('mart').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

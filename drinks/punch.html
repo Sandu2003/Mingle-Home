@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle-Bites - Recipes & Ingredients</title>
+    <link rel="stylesheet" href="../recipie_pages/reci.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search Recipes & Ingredients...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+        <div class="logo"><img src="../pics/Mingle.png" alt="logo" height="100px" width="100px"></div>
+        <nav>
+            <a href="../Mingle-bites/Mingle-bites.html">Home</a>
+            <a href="#recently-recepies">Recent Recipes</a>
+            <a href="#Seasonal foods">Seasonal Foods</a>
+            <a href="#Trendy foods">Trendy Foods</a>
+        </nav>
+        <div class="line"></div>
+    </header>
+
+    <div class="food-img">
+        <img src="drinks-pics/punch.jpg" alt="Pink Lemonade Moscato Punch">
+        <div class="text-overlay">Pink Lemonade Moscato Punch</div>
+    </div>
+
+    <div class="main">
+        <div class="recipe-container">
+            <div class="instructions">
+                <br>
+                <div>
+                    <img src="../pics/how.jpg" alt="How to cook illustration">
+                </div>
+                <div class="intro-section">
+                    <div>
+                        <img src="../pics/time.jpg"  alt="Preparation time">
+                        <p>5 min</p>
+                    </div>
+                    <div>
+                        <img src="../pics/plate.png" alt="Serving size">
+                        <p>1 serving</p>
+                    </div>
+                </div>
+                <h2>How to Make It</h2>
+                <p>
+                    -In two standard 16-cube ice cube trays, place two raspberries in each section. <br>-Pour cold water into the trays until they are three-quarters full. <br>-Freeze for at least 6 hours or overnight until solid.<br>
+                    -In the meantime, in a small pot, combine the sugar and 2/3 cup water. Over medium-high heat, bring to a boil, then lower the heat to a simmer and cook for 3 to 5 minutes, stirring regularly, until the sugar dissolves.
+                    Allow the simple syrup to cool fully before transferring it to a container and keeping it chilled.<br>
+                    -In a large pitcher, mix together the lemon juice and simple syrup until ready to serve. Stir the Moscato into the mixture. Fill six glasses with the Moscato mixture after dividing the ice cubes among them. <br>-Add the lemon rounds and mint sprigs as garnish.
+                </p>
+            </div>
+            <div class="middle-line"></div>
+            <div class="ingredients">
+                <div>
+                    <img src="../pics/ing.jpg" height="180px" alt="Ingredients illustration">
+                </div>
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>4 ounces raspberries</li>
+                    <li>2/3 cup sugar</li>
+                    <li>1 cup freshly squeezed lemon juice</li>
+                    <li>12 thin lemon rounds</li>
+                    <li>One 750-milliliter bottle pink sparkling Moscato</li>
+                    <li>6 large mint sprigs</li>
+                </ul>
+                <div class="go-to-mart">
+                    <p><b>Buy your missing ingredients from us Right Now!!!</b></p>
+                    <button onclick="scrollToMart()">Go to Mart 🛒</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/Scripts.js"></script>
+    <script>
+        // Scroll to Mart Section
+        function scrollToMart() {
+            document.getElementById('mart').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
