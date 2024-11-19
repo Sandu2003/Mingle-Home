@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle-Bites - Recipes & Ingredients</title>
+    <link rel="stylesheet" href="../recipie_pages/reci.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search Recipes & Ingredients...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+        <div class="logo"><img src="../pics/Mingle.png" alt="logo" height="100px" width="100px"></div>
+        <nav>
+        <a href="../Mingle-bites/Mingle-bites.html">Home</a>
+        <a href="#recently-recepies">Recent-recepies</a>
+        <a href="#Seasonal foods">Seasonal foods</a>
+        <a href="#Trendy foods">Trendy foods</a>
+    </nav>
+    <div class="line"></div>
+</header>
+<div class="food-img">
+    <img src="drinks-pics/ice-coffee.jpeg" alt="test-img" >
+    <div class="text-overlay">Strawberry Tart</div>
+</div>
+<div class="main">
+    <div class="recipe-container">
+        <div class="instructions">
+            <br>
+            <div>
+                <img src="../pics/how.jpg"  alt="How to cook illustration">
+            </div>
+            <div class="intro-section">
+                <div>
+                    <img src="../pics/time.jpg" height="60px" alt="Preparation time">
+                    <p>1 hour 30 minutes</p>
+                </div>
+                <div>
+                    <img src="../pics/plate.png" height="60px" alt="Serving size">
+                    <p style="">12 servings </p>
+                </div>
+            </div>
+            <h2>How to Make It</h2>
+            <p> - Preheat the oven to 350°F (175°C). Grease a tart pan with removable bottom. Mix the tart dough and refrigerate it for 30 minutes.<br>
+                - Roll out the dough and fit it into the tart pan, then bake for 20-25 minutes until golden.<br>
+                - Prepare the pastry cream by cooking milk, sugar, egg yolks, and cornstarch until thickened. Let it cool.<br>
+                - Once the tart shell and pastry cream are cooled, spread the cream in the tart shell and arrange the sliced strawberries on top.<br>
+                - Brush with apricot jam for a glossy finish. Refrigerate for at least an hour before serving.
+            </p>
+            
+        </div>
+        <div class="middle-line"></div>
+        <div class="ingredients">
+            <div>
+                <img src="../pics/ing.jpg" height="180px" alt="Ingredients illustration">
+            </div>
+            <h2>Ingredients</h2>
+            <h4>For the Tart Shell (Pâte Sucrée):</h4>
+                <ul>
+                    <li>1 1/4 cups (150g) all-purpose flour</li>
+                    <li>1/4 cup (30g) powdered sugar</li>
+                    <li>1/2 cup (115g) unsalted butter, cold and cubed</li>
+                    <li>1 large egg yolk</li>
+                    <li>1-2 tbsp ice water (if needed)</li>
+                </ul>
+
+                <h4>For the Pastry Cream:</h4>
+                <ul>
+                    <li>2 cups (480ml) whole milk</li>
+                    <li>1/2 cup (100g) granulated sugar</li>
+                    <li>4 large egg yolks</li>
+                    <li>2 tbsp (15g) cornstarch</li>
+                    <li>1/2 tsp vanilla extract</li>
+                    <li>1 tbsp unsalted butter</li>
+                </ul>
+
+                <h4>For the Topping:</h4>
+                <ul>
+                    <li>1 lb (450g) fresh strawberries, hulled and sliced</li>
+                    <li>1/4 cup (60ml) apricot jam or fruit glaze</li>
+                </ul>
+
+            <div class="go-to-mart">
+                <p><b>Buy your missing ingerediants from us Right Now!!!</b></p>
+                <button onclick="scrollToMart()">Go to Mart🛒</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+<footer>
+    <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+    
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+        </a>
+    </div>
+</footer>
+<script src="js/Scripts.js"></script>
+<script>
+    // Scroll to Mart Section
+    function scrollToMart() {
+        document.getElementById('mart').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+
+
+
+</html>

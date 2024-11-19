@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle-Bites - Recipes & Ingredients</title>
+    <link rel="stylesheet" href="../recipie_pages/reci.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search Recipes & Ingredients...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+        <div class="logo"><img src="../pics/Mingle.png" alt="logo" height="100px" width="100px"></div>
+        <nav>
+        <a href="../Mingle-bites/Mingle-bites.html">Home</a>
+        <a href="#recently-recepies">Recent-recepies</a>
+        <a href="#Seasonal foods">Seasonal foods</a>
+        <a href="#Trendy foods">Trendy foods</a>
+    </nav>
+    <div class="line"></div>
+</header>
+<div class="food-img">
+    <img src="drinks-pics/ice-coffee.jpeg" alt="test-img" >
+    <div class="text-overlay">Sushi Rice</div>
+</div>
+<div class="main">
+    <div class="recipe-container">
+        <div class="instructions">
+            <br>
+            <div>
+                <img src="../pics/how.jpg"  alt="How to cook illustration">
+            </div>
+            <div class="intro-section">
+                <div>
+                    <img src="../pics/time.jpg" height="60px" alt="Preparation time">
+                    <p>30 minutes </p>
+                </div>
+                <div>
+                    <img src="../pics/plate.png" height="60px" alt="Serving size">
+                    <p style="">4 servings </p>
+                </div>
+            </div>
+            <h2>How to Make It</h2>
+            <p> - Rinse the sushi rice under cold water until the water runs clear to remove excess starch.<br>
+                - Cook the rice in a rice cooker or a pot with 2 cups of water. Once cooked, let it sit for 10 minutes.<br>
+                - In a small saucepan, combine rice vinegar, sugar, and salt. Warm until dissolved and then let it cool.<br>
+                - Gently fold the vinegar mixture into the hot rice using a rice paddle or spoon. Avoid mashing the rice.<br>
+                - Allow the rice to cool to room temperature before using it to make sushi
+            </p>
+            
+        </div>
+        <div class="middle-line"></div>
+        <div class="ingredients">
+            <div>
+                <img src="../pics/ing.jpg" height="180px" alt="Ingredients illustration">
+            </div>
+            <h2>Ingredients</h2>
+            <ul>
+                <li>2 cups sushi or short-grain rice</li>
+                <li>2 cups water (for cooking the rice)</li>
+                <li>2 tbsp rice vinegar</li>
+                <li>2 tbsp sugar</li>
+                <li>1 tsp salt</li>
+            </ul>
+            <div class="go-to-mart">
+                <p><b>Buy your missing ingerediants from us Right Now!!!</b></p>
+                <button onclick="scrollToMart()">Go to Mart🛒</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+<footer>
+    <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+    
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+        </a>
+    </div>
+</footer>
+<script src="js/Scripts.js"></script>
+<script>
+    // Scroll to Mart Section
+    function scrollToMart() {
+        document.getElementById('mart').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle-Bites - Recipes & Ingredients</title>
+    <link rel="stylesheet" href="../recipie_pages/reci.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search Recipes & Ingredients...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+        <div class="logo"><img src="../pics/Mingle.png" alt="logo" height="100px" width="100px"></div>
+        <nav>
+        <a href="../Mingle-bites/Mingle-bites.html">Home</a>
+        <a href="#recently-recepies">Recent-recepies</a>
+        <a href="#Seasonal foods">Seasonal foods</a>
+        <a href="#Trendy foods">Trendy foods</a>
+    </nav>
+    <div class="line"></div>
+</header>
+<div class="food-img">
+    <img src="drinks-pics/ice-coffee.jpeg" alt="test-img" >
+    <div class="text-overlay">Udon Noodles</div>
+</div>
+<div class="main">
+    <div class="recipe-container">
+        <div class="instructions">
+            <br>
+            <div>
+                <img src="../pics/how.jpg"  alt="How to cook illustration">
+            </div>
+            <div class="intro-section">
+                <div>
+                    <img src="../pics/time.jpg" height="60px" alt="Preparation time">
+                    <p>25 minutes </p>
+                </div>
+                <div>
+                    <img src="../pics/plate.png" height="60px" alt="Serving size">
+                    <p style="">4 servings </p>
+                </div>
+            </div>
+            <h2>How to Make It</h2>
+            <p> - Cook the Udon noodles according to the package instructions (usually for 3-5 minutes in boiling water). Drain and set aside.<br>
+                - Heat vegetable oil in a large pan or wok over medium heat. Add garlic and onion, stir-fry for 1-2 minutes until fragrant.<br>
+                - Add carrots, bell pepper, and mushrooms to the pan. Stir-fry for 3-4 minutes until vegetables begin to soften.<br>
+                - Pour in the broth, soy sauce, and mirin (if using). Bring the mixture to a simmer.<br>
+                - Add the Udon noodles to the pan and stir to combine. Let the noodles cook in the broth for 2-3 minutes, absorbing the flavors.<br>
+                - Drizzle sesame oil and chili paste (if using) over the noodles and stir well.<br>
+                - If using spinach or bok choy, add them to the pan and cook until wilted.<br>
+                - Serve the Udon noodles hot, garnished with a boiled egg (optional), chopped green onions, sesame seeds, and lime wedges.
+            </p>
+            
+        </div>
+        <div class="middle-line"></div>
+        <div class="ingredients">
+            <div>
+                <img src="../pics/ing.jpg" height="180px" alt="Ingredients illustration">
+            </div>
+            <h2>Ingredients</h2>
+            <ul>
+                <li>300g Udon noodles</li>
+                <li>1 tbsp vegetable oil</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 small onion, sliced</li>
+                <li>1 carrot, julienned</li>
+                <li>1 bell pepper, thinly sliced</li>
+                <li>100g mushrooms, sliced (shiitake or button mushrooms)</li>
+                <li>2 cups vegetable broth or chicken broth</li>
+                <li>2 tbsp soy sauce</li>
+                <li>1 tbsp mirin (optional)</li>
+                <li>1 tbsp sesame oil</li>
+                <li>1 tsp chili paste (optional)</li>
+                <li>1/2 cup spinach or bok choy (optional)</li>
+                <li>1 boiled egg, halved (optional)</li>
+                <li>2 green onions, chopped for garnish</li>
+                <li>1 tsp sesame seeds for garnish (optional)</li>
+                <li>Lime wedges for serving (optional)</li>
+            </ul>
+            <div class="go-to-mart">
+                <p><b>Buy your missing ingerediants from us Right Now!!!</b></p>
+                <button onclick="scrollToMart()">Go to Mart🛒</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+<footer>
+    <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+    
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+        </a>
+    </div>
+</footer>
+<script src="js/Scripts.js"></script>
+<script>
+    // Scroll to Mart Section
+    function scrollToMart() {
+        document.getElementById('mart').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+
+
+
+</html>
