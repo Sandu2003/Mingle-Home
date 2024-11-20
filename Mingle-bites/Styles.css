@@ -64,46 +64,30 @@ header .line {
     width: 1220px;
     background-color: #032B43;
 }
-.main-container {
-    display: flex;
-    padding: 20px;
-}
-
 .content-container {
-    width: 75%;
-    display: flex;
-}
-
-.recipes {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-}
-
-.recipes h2 {
-    color: #032B43;
-    width: 100%;
-    margin-bottom: 10px;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    position: relative;
+    box-sizing: border-box;
 }
 
 .recipe-card {
     position: relative;
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: calc(33.33% - 20px);
     overflow: hidden;
-    text-align: center;
-    flex: 0 0 calc(33.33% - 20px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-card img {
     width: 100%;
-    border-radius: 8px;
+    height: 250px;
+    display: block;
     transition: transform 0.3s ease;
-    height: auto;
-    object-fit: cover;
 }
 
 .recipe-card:hover img {
@@ -111,25 +95,52 @@ header .line {
 }
 
 .recipe-card .hover-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: 8px;
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
 }
 
 .recipe-card:hover .hover-overlay {
     opacity: 1;
 }
+
+.hover-overlay a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.recipe-card .hover-overlay span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .recipes {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .recipes {
+        width: 100%;
+    }
+}
+
+
 .hover-overlay a {
     color: white;
     font-size: 1.2rem;
