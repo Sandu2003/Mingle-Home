@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background:url(../pics/reg.webp) no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-size: 24px;
+    color: rgb(30, 8, 90);
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 16px;
+    color: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(7, 7, 7);
+    font-size: 12px;
+
+}
+
+.input-box input::placeholder {
+    color: rgba(3, 3, 3, 0.7);
+}
+
+.show-password {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.sign-in-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f9b866;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sign-in-btn:hover {
+    background-color: #f79e45;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: white;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.google {
+    background-color: #07234e;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
