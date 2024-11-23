@@ -14,22 +14,36 @@
             <a href="../home.html">Home</a>
             
         </nav>
-    </header>
         
     </header>
+
 
     <main>
         <div class="cart-container">
             <h1>Your Shopping Cart</h1>
-
+        
+            <!-- Search Bar -->
+            <div class="cart-search">
+                <input
+                    type="text"
+                    id="search-bar"
+                    placeholder="Search items in your cart..."
+                    oninput="filterCartItems()"
+                />
+            </div>
+        
             <!-- Cart Items Will Be Displayed Here -->
             <div class="cart-items" id="cart-items">
                 <!-- Cart items will be injected here by JavaScript -->
             </div>
-
+        
             <!-- Cart Total -->
-            <a href="javascript:void(0)" class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</a>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <a href="javascript:void(0)" class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</a>
+            </div>
         </div>
+        
     </main>
 
     <footer>

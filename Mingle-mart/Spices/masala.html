@@ -14,6 +14,7 @@
         </div>
         <nav>
             <a href="../home.html">Home</a>
+            <a href="../cart_list/cart_l.html">Cart🛍️ (<span id="cart-count">0</span>)</a>
         </nav>
     </header>
 
@@ -92,40 +93,12 @@
         </div>
     </footer>
 
+    <script src="scripts.js"></script>
     <script>
-        function addToCart(productName, price) {
-            const quantityInput = document.getElementById('quantity');
-            const quantity = parseInt(quantityInput.value, 10);
-            if (quantity < 1) {
-                alert("Please enter a valid quantity!");
-                return;
-            }
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.productName === productName);
-
-            if (existingProduct) {
-                existingProduct.quantity += quantity;
-            } else {
-                cart.push({ productName, price, quantity });
-            }
-            
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${quantity} x ${productName} added to your cart!`);
-        }
-
-        function addToCartAndNavigate(productName, price, productPage) {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.productName === productName);
-
-            if (existingProduct) {
-                existingProduct.quantity += 1; // Default to 1 for related products
-            } else {
-                cart.push({ productName, price, quantity: 1 });
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-            window.location.href = productPage;
-        }
+        // Initialize Cart Count on Page Load
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+        });
     </script>
 </body>
 </html>

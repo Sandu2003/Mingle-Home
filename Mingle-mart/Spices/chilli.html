@@ -16,7 +16,6 @@
             <a href="../home.html">Home</a>
             <a href="../cart_list/cart_l.html">Cart🛍️ (<span id="cart-count">0</span>)</a>
         </nav>
-
     </header>
 
     <!-- Product Detail Section -->
@@ -24,15 +23,15 @@
         <div class="product-container">
             <!-- Product Image Gallery -->
             <div class="product-images">
-                <img src="../pics/tumeric.jpeg" alt="Turmeric" class="main-image">
+                <img src="../pics/chilli.webp" alt="Chili Powder" class="main-image">
             </div>
 
             <!-- Product Info -->
             <div class="product-info">
-                <h1 class="product-name">Turmeric</h1>
-                <p class="product-price">RS150 / 100g</p>
+                <h1 class="product-name">Chili Powder</h1>
+                <p class="product-price">RS180 / 100g</p>
                 <p class="product-description">
-                    Turmeric is a vibrant yellow spice known for its health benefits. It's commonly used in curries, soups, and many other dishes to add a unique earthy flavor.
+                    Chili powder is made from dried and ground chili peppers and is used to add heat and flavor to dishes. It’s a popular ingredient in many cuisines, including Mexican, Indian, and American.
                 </p>
             
                 <div class="quantity-selector">
@@ -41,7 +40,7 @@
                 </div>
             
                 <div class="product-actions">
-                    <button class="btn-primary" onclick="addToCart('Turmeric', 150)">Add to Cart</button>
+                    <button class="btn-primary" onclick="addToCart('Chili Powder', 180)">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -52,25 +51,25 @@
         <h2>Related Products</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="../pics/black_p.jpg" alt="Black Pepper">
-                <h3>Black Pepper</h3>
-                <p>RS120 / 100g</p>
-                <button class="btn-secondary" onclick="addToCartAndNavigate('Black Pepper', 120, 'Black.html')">Buy</button>
-            </div>
-            <div class="product-card">
-                <img src="../pics/cumin.jpeg" alt="Cumin">
+                <img src="../pics/cumin.jpg" alt="Cumin">
                 <h3>Cumin</h3>
                 <p>RS130 / 100g</p>
                 <button class="btn-secondary" onclick="addToCartAndNavigate('Cumin', 130, 'cumin.html')">Buy</button>
             </div>
             <div class="product-card">
-                <img src="../pics/chilli.webp" alt="Chili Powder">
-                <h3>Chili Powder</h3>
-                <p>RS180 / 100g</p>
-                <button class="btn-secondary" onclick="addToCartAndNavigate('Chili Powder', 180, 'chilli.html')">Buy</button>
+                <img src="../pics/turmeric.jpg" alt="Turmeric">
+                <h3>Turmeric</h3>
+                <p>RS150 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Turmeric', 150, 'tumeric.html')">Buy</button>
             </div>
             <div class="product-card">
-                <img src="../pics/masala.jpg" alt="Garam Masala">
+                <img src="../pics/black_pepper.jpg" alt="Black Pepper">
+                <h3>Black Pepper</h3>
+                <p>RS120 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Black Pepper', 120, 'black.html')">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/garam_masala.jpg" alt="Garam Masala">
                 <h3>Garam Masala</h3>
                 <p>RS200 / 100g</p>
                 <button class="btn-secondary" onclick="addToCartAndNavigate('Garam Masala', 200, 'masala.html')">Buy</button>
@@ -95,12 +94,11 @@
     </footer>
 
     <script src="scripts.js"></script>
-<script>
-    // Initialize Cart Count on Page Load
-    document.addEventListener("DOMContentLoaded", () => {
-        updateCartCount();
-    });
-</script>
-
+    <script>
+        // Initialize Cart Count on Page Load
+        document.addEventListener("DOMContentLoaded", () => {
+            updateCartCount();
+        });
+    </script>
 </body>
 </html>

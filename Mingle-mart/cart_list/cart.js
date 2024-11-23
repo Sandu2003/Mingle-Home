@@ -154,3 +154,16 @@ function proceedToCheckout() {
     `;
     document.head.appendChild(style);
 }
+function filterCartItems() {
+    const searchQuery = document.getElementById('search-bar').value.toLowerCase();
+    const cartItems = document.querySelectorAll('.cart-item');
+
+    cartItems.forEach((item) => {
+        const itemName = item.querySelector('.cart-item-name').textContent.toLowerCase();
+        if (itemName.includes(searchQuery)) {
+            item.style.display = 'flex'; // Show the item if it matches the search query
+        } else {
+            item.style.display = 'none'; // Hide the item if it doesn't match
+        }
+    });
+}
