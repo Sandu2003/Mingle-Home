@@ -16,24 +16,20 @@
     </header>
 
     <section class="product-detail">
-        <div class="product-container">
-            <div class="product-images">
-                <img src="../pics/carrots.webp" alt="Product Image" class="main-image">
-
+        <div class="product-images">
+            <img src="../pics/SPIN.webp" alt="Product Image" class="main-image">
+        </div>
+        
+        <div class="product-info">
+            <h1 class="product-name">Organic Spinach</h1>
+            <p class="product-price">RS.200.00/ kg</p>
+            <p class="product-description">
+                Esta espinaca orgánica fresca está llena de nutrientes, ofreciendo una adición saludable a cualquier comida. Perfecta para salteados, al vapor o sopas.
+            </p>
+            <div class="product-actions">
+                <a href="../cart/cart3.html"><button class="btn-primary" onclick="addToCart('Organic Spinach', 180.00)">Add to Cart</button></a>
             </div>
-
-            <div class="product-info">
-                <h1 class="product-name">Organic Fresh Carrots</h1>
-                <p class="product-price">RS.200.00/ kg</p>
-                <p class="product-description">
-                    These fresh carrots are grown organically, offering a crunchy, healthy snack. Great for salads, soups, or even juicing.
-                </p>
-            
-                <div class="product-actions">
-                    <a href="../cart/cart.html"><button class="btn-primary" onclick="addToCart('Organic Fresh Carrots', 500.00)">Add to Cart</button></a>
-                   
-                </div>
-            </div>
+        </div>
             
         </div>
     </section>
@@ -42,6 +38,13 @@
     <section class="related-products">
         <h2>Related Products</h2>
         <div class="product-grid">
+            <div class="product-card">
+                <a href="../product/Producr_v.html"><img src="../pics/carrots.webp" alt="Carrots"></a>
+                <h3>Carrot</h3>
+                <p>RS 200.00 / kg</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Carrot', 200, '../product/Producr_v.html')">Buy</button>
+            </div>
+        
             <div class="product-card">
                 <a href="../product/Product_v1.html"><img src="../pics/cauli.webp" alt="Cauliflower"></a>
                 <h3>Organic Cauliflower</h3>
@@ -55,13 +58,6 @@
                 <h3>Organic Broccoli</h3>
                 <p>RS200.00 / kg</p>
                 <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Broccoli', 200,'../product/Product_v2.html')">Buy</button>
-            </div>
-            
-            <div class="product-card">
-                <a href="../product/Product_v3.html"><img src="../pics/SPIN.webp" alt="Organic Spinach"></a>
-                <h3>Organic Spinach</h3>
-                <p>RS200.00 / kg</p>
-                <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Spinach', 200,'../product/Product_v3.html')">Buy</button>
             </div>
             
             
@@ -85,7 +81,7 @@
         </div>
     </footer>
 
-    <script>function addToCart(productName, productPrice) {
+    <script> function addToCart(productName, productPrice) {
        
         console.log(`Added ${productName} for Rs ${productPrice} to the cart.`);
     }

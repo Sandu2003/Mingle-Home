@@ -42,90 +42,30 @@
         <h2>Related Products</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="../pics/carrots.webp" alt="Carrot">
-                <h3>Organic Carrot</h3>
-                <p>RS 300.00 / kg</p>
-                <a href=""><button class="btn-secondary" onclick="addToCart('Organic Carrot', 300)">Add to Cart</button></a>
+                <a href="../product/Producr_v.html"><img src="../pics/carrots.webp" alt="Carrots"></a>
+                <h3>Carrot</h3>
+                <p>RS 200.00 / kg</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Carrot', 200, '../product/Producr_v.html')">Buy</button>
             </div>
+        
             
             
             
             <div class="product-card">
-                <img src="../pics/broco.webp" alt="Broccoli">
+                <a href="../product/Product_v2.html"><img src="../pics/broco.webp" alt="Organic Broccoli"></a>
                 <h3>Organic Broccoli</h3>
                 <p>RS200.00 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Broccoli', 200)">Add to Cart</button>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Broccoli', 200,'../product/Product_v2.html')">Buy</button>
             </div>
             
             <div class="product-card">
-                <img src="../pics/SPIN.webp" alt="Spinach">
+                <a href="../product/Product_v3.html"><img src="../pics/SPIN.webp" alt="Organic Spinach"></a>
                 <h3>Organic Spinach</h3>
-                <p>RS180.00 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Spinach', 180)">Add to Cart</button>
+                <p>RS200.00 / kg</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Spinach', 200,'../product/Product_v3.html')">Buy</button>
             </div>
             
-            <div class="product-card">
-                <img src="../pics/TOMA.webp" alt="Tomato">
-                <h3>Organic Tomatoes</h3>
-                <p>RS220 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Tomatoes', 220)">Add to Cart</button>
-            </div>
             
-            <div class="product-card">
-                <img src="../pics/CUCUMBER.jpeg" alt="Cucumber">
-                <h3>Organic Cucumbers</h3>
-                <p>RS150 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Cucumbers', 150)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/LETTU.jpeg" alt="Lettuce">
-                <h3>Organic Lettuce</h3>
-                <p>RS170 / head</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Lettuce', 170)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/BELL.jpeg" alt="Bell Pepper">
-                <h3>Organic Bell Peppers</h3>
-                <p>RS 250 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Bell Peppers', 250)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/POTATO.jpeg" alt="Potato">
-                <h3>Organic Potatoes</h3>
-                <p>RS 100 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Potatoes', 100)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/ONION.webp" alt="Onion">
-                <h3>Organic Onions</h3>
-                <p>RS130 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Onions', 130)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/garlic.webp" alt="Garlic">
-                <h3>Organic Garlic</h3>
-                <p>rs300 / bulb</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Garlic', 300)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/zuk.jpeg" alt="Zucchini">
-                <h3>Organic Zucchini</h3>
-                <p>RS200 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Zucchini', 200)">Add to Cart</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="../pics/egg.jpeg" alt="Eggplant">
-                <h3>Organic Eggplant</h3>
-                <p>RS250 / kg</p>
-                <button class="btn-secondary" onclick="addToCart('Organic Eggplant', 250)">Add to Cart</button>
-            </div>
             
             
         </div>
@@ -146,9 +86,15 @@
         </div>
     </footer>
 
-    <script>function addToCart(productName, price) {
-        const quantity = document.getElementById('quantity').value;
-        alert(`${quantity} x ${productName} has been added to your cart at RS${(price * quantity).toFixed(2)}.`);
+    <script> function addToCart(productName, productPrice) {
+       
+        console.log(`Added ${productName} for Rs ${productPrice} to the cart.`);
+    }
+
+   
+    function addToCartAndNavigate(productName, productPrice, redirectUrl) {
+        addToCart(productName, productPrice); 
+        window.location.href = redirectUrl;  
     }
     </script>
 </body>
