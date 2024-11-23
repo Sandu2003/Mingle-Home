@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Mingle-Mart</title>
+    <link rel="stylesheet" href="../css/product_p.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="../home.html"><img src="../pics/Mingle-m.png" alt="Mingle-Bites Logo"></a>
+        </div>
+        <nav>
+            <a href="../home.html">Home</a>
+        </nav>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="product-container">
+            <!-- Product Image Gallery -->
+            <div class="product-images">
+                <img src="../pics/lemonade.webp" alt="Lemonade" class="main-image">
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1 class="product-name">Lemonade</h1>
+                <p class="product-price">RS180 / 1L</p>
+                <p class="product-description">
+                    Refresh your taste buds with our zesty Lemonade, a perfect balance of sweet and tart flavors.
+                </p>
+            
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+            
+                <div class="product-actions">
+                    <button class="btn-primary" onclick="addToCart('Lemonade', 180)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../pics/soda.avif" alt="Soda">
+                <h3>Soda</h3>
+                <p>RS180 / 1L</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Soda', 180, './soda.html')">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/iced_tea.png" alt="Iced Tea">
+                <h3>Iced Tea</h3>
+                <p>RS200 / 1L</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Iced Tea', 200, './iced_tea.html')">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/pepsi.jpg" alt="Pepsi">
+                <h3>Pepsi</h3>
+                <p>RS150 / 1L</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Pepsi', 150, './pepsi.html')">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/egb.webp" alt="Elephant House Ginger Beer">
+                <h3>Elephant House Ginger Beer</h3>
+                <p>RS250 / 1L</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Elephant House Ginger Beer', 250, './egb.html')">Buy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            const quantityInput = document.getElementById('quantity');
+            const quantity = parseInt(quantityInput.value, 10);
+            if (quantity < 1) {
+                alert("Please enter a valid quantity!");
+                return;
+            }
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find(item => item.productName === productName);
+
+            if (existingProduct) {
+                existingProduct.quantity += quantity;
+            } else {
+                cart.push({ productName, price, quantity });
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${quantity} x ${productName} added to your cart!`);
+        }
+
+        function addToCartAndNavigate(productName, price, productPage) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find(item => item.productName === productName);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1; // Default to 1 for related products
+            } else {
+                cart.push({ productName, price, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = productPage;
+        }
+    </script>
+</body>
+</html>

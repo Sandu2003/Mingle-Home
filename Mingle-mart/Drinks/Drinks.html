@@ -10,102 +10,76 @@
 
     <header class="header">
         <div class="logo"><a href="../home.html"><img src="../pics/Mingle-m.png" alt="logo" ></a></div>
-        <nav>
-            <a href="../home.html">Home</a>
-            <a href="cart.html">Cart</a>
-        </nav>
+
         <div class="search-container">
             <input type="text" id="searchInput" class="search-input" placeholder="Search...">
             <button type="button" class="search-btn" onclick="searchFunction()">🔍</button> &nbsp
             <button type="button" class="reset-btn" onclick="resetSearch()">🗘</button>
         </div>
+        <nav>
+            <a href="../home.html">Home</a>
+        </nav>
         
     </header>
     <section class="cate" >
 <div class="product-carousel">
     <div class="product-card">
-        <img src="images/elephant-house-ginger-beer.jpg" alt="Elephant House Ginger Beer">
+        <img src="../pics/egb.webp" alt="Elephant House Ginger Beer">
         <h3>Elephant House Ginger Beer</h3>
-        <p>$2.50 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Elephant House Ginger Beer', 2.50)">Add to Cart</button>
+        <p>RS250 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Elephant House Ginger Beer', 250, 'EGB_D.html')">Buy</button>
     </div>
     
     <div class="product-card">
-        <img src="images/soda.jpg" alt="Soda">
+        <img src="../pics/soda.avif" alt="Soda">
         <h3>Soda</h3>
-        <p>$1.80 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Soda', 1.80)">Add to Cart</button>
+        <p>RS180 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Soda', 180,'Soda.html')">Buy</button>
     </div>
     
     <div class="product-card">
-        <img src="images/iced-tea.jpg" alt="Iced Tea">
+        <img src="../pics/iced_tea.png" alt="Iced Tea">
         <h3>Iced Tea</h3>
-        <p>$2.00 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Iced Tea', 2.00)">Add to Cart</button>
+        <p>RS200 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Iced Tea', 200,'iced_tea.html')">Buy</button>
     </div>
     
     <div class="product-card">
-        <img src="images/pepsi.jpg" alt="Pepsi">
+        <img src="../pics/pepsi.jpg" alt="Pepsi">
         <h3>Pepsi</h3>
-        <p>$1.50 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Pepsi', 1.50)">Add to Cart</button>
+        <p>RS150 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Pepsi', 150,'pepsi.html')">Buy</button>
     </div>
     
     <div class="product-card">
-        <img src="images/green-apple-juice.jpg" alt="Green Apple Juice">
-        <h3>Green Apple Juice</h3>
-        <p>$2.20 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Green Apple Juice', 2.20)">Add to Cart</button>
+        <img src="../pics/cream.webp" alt="Cream Soda">
+        <h3>Cream soda</h3>
+        <p>RS180 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('cream_soda', 180,'cream_soda.html')">Buy</button>
     </div>
+
     
     <div class="product-card">
-        <img src="images/Cream Soda.jpg" alt="Cream Soda">
-        <h3>Cola</h3>
-        <p>$1.80 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Cream Soda', 1.80)">Add to Cart</button>
-    </div>
-    
-    <div class="product-card">
-        <img src="images/orange-juice.jpg" alt="Orange Juice">
-        <h3>Orange Juice</h3>
-        <p>$2.50 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Orange Juice', 2.50)">Add to Cart</button>
-    </div>
-    
-    <div class="product-card">
-        <img src="images/lemonade.jpg" alt="Lemonade">
+        <img src="../pics/lemonade.webp" alt="Lemonade">
         <h3>Lemonade</h3>
-        <p>$2.00 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Lemonade', 2.00)">Add to Cart</button>
+        <p>RS200 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Lemonade', 200,'lemon.html')">Buy</button>
     </div>
     
     <div class="product-card">
-        <img src="images/apple-juice.jpg" alt="Apple Juice">
-        <h3>Apple Juice</h3>
-        <p>$2.30 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Apple Juice', 2.30)">Add to Cart</button>
-    </div>
-    
-    <div class="product-card">
-        <img src="images/grape-juice.jpg" alt="Grape Juice">
+        <img src="../pics/grape.jpeg" alt="Grape Juice">
         <h3>Grape Juice</h3>
-        <p>$2.50 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Grape Juice', 2.50)">Add to Cart</button>
+        <p>RS250 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Grape Juice', 250,'Grape.html')">Buy</button>
     </div>
     
     <div class="product-card">
-        <img src="images/carrot-juice.jpg" alt="Carrot Juice">
+        <img src="../pics/carr.webp" alt="Carrot Juice">
         <h3>Carrot Juice</h3>
-        <p>$2.00 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Carrot Juice', 2.00)">Add to Cart</button>
+        <p>RS200 / 1L</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Carrot Juice', 200,'carrot.html')">Buy</button>
     </div>
-    
-    <div class="product-card">
-        <img src="images/pineapple-juice.jpg" alt="Pineapple Juice">
-        <h3>Pineapple Juice</h3>
-        <p>$2.40 / 1L</p>
-        <button class="btn-secondary" onclick="addToCart('Pineapple Juice', 2.40)">Add to Cart</button>
-    </div>
+
     
 </div>
 </section>

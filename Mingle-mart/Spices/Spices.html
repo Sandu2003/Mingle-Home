@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Mingle-Mart</title>
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><a href="../home.html"><img src="../pics/Mingle-m.png" alt="logo" ></a></div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+            <button type="button" class="search-btn" onclick="searchFunction()">🔍</button> &nbsp
+            <button type="button" class="reset-btn" onclick="resetSearch()">🗘</button>
+        </div>
+        <nav>
+            <a href="../home.html">Home</a>
+        </nav>
+        
+    </header>
+    <section class="cate">
+        <div class="product-carousel">
+            <div class="product-card">
+                <img src="../pics/black_p.jpg" alt="Black Pepper">
+                <h3>Black Pepper</h3>
+                <p>RS120 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Black Pepper', 120, 'black.html')">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="../pics/tumeric.jpeg" alt="Turmeric">
+                <h3>Turmeric</h3>
+                <p>RS150 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Turmeric', 150,'turmeric.html')">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="../pics/cumin.jpeg" alt="Cumin">
+                <h3>Cumin</h3>
+                <p>RS130 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Cumin', 130,'cumin.html')">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="../pics/chilli.webp" alt="Chili Powder">
+                <h3>Chili Powder</h3>
+                <p>RS180 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Chili Powder', 180,'chilli.html')">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="../pics/masala.jpg" alt="Garam Masala">
+                <h3>Garam Masala</h3>
+                <p>RS200 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Garam Masala', 200,'masala.html')">Buy</button>
+            </div>
+
+            <div class="product-card">
+                <img src="../pics/cardoman.webp" alt="Cardamom">
+                <h3>Cardamom</h3>
+                <p>RS250 / 100g</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Cardamom', 250,'cardoman.html')">Buy</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productName, productPrice) {
+            console.log(`Added ${productName} for Rs ${productPrice} to the cart.`);
+        }
+
+        function addToCartAndNavigate(productName, productPrice, redirectUrl) {
+            addToCart(productName, productPrice);
+            window.location.href = redirectUrl;
+        }
+
+        function searchFunction() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim(); 
+            const products = document.querySelectorAll('.product-card'); 
+            let hasResults = false; 
+
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase(); 
+
+                if (productName.includes(query)) {
+                    product.style.display = 'block'; 
+                    hasResults = true;
+                } else {
+                    product.style.display = 'none'; 
+                }
+            });
+
+            if (!query) {
+                products.forEach(product => (product.style.display = 'block'));
+                alert("Please enter a search term!");
+                return;
+            }
+
+            if (!hasResults) {
+                alert("No products found matching your search.");
+            }
+        }
+
+        function resetSearch() {
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => (product.style.display = 'block'));
+            document.getElementById('searchInput').value = ''; 
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+        </a>
+    </div>
+</footer>
+</html>

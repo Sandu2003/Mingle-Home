@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Mingle-Mart</title>
+<link rel="stylesheet" href="../css/product_p.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="../home.html"><img src="../pics/Mingle-m.png" alt="Mingle-Bites Logo"></a>
+        </div>
+        <nav>
+            <a href="../home.html">Home</a>
+        </nav>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="product-container">
+            <!-- Product Image -->
+            <div class="product-images">
+                <img src="../pics/pepsi.jpg" alt="Pepsi" class="main-image">
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1 class="product-name">Pepsi</h1>
+                <p class="product-price">RS150 / 1L</p>
+                <p class="product-description">
+                    Refresh your day with the classic and bold taste of Pepsi, perfect for any occasion!
+                </p>
+            
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+            
+            
+                <div class="product-actions">
+                    <button class="btn-primary" onclick="addToCart('Elephant House Ginger Beer', 250)">Add to Cart</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../pics/soda.avif" alt="Soda">
+                <h3>Soda</h3>
+                <p>RS180 / 1L</p>
+                <button class="btn-secondary" onclick="buyNow('Soda', 180)">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/egb.webp" alt="Elephant House Ginger Beer">
+                <h3>Elephant House Ginger Beer</h3>
+                <p>RS250 / 1L</p>
+                <button class="btn-secondary" onclick="buyNow('Elephant House Ginger Beer', 250)">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/iced_tea.png" alt="Iced Tea">
+                <h3>Iced Tea</h3>
+                <p>RS200 / 1L</p>
+                <button class="btn-secondary" onclick="buyNow('Iced Tea', 200)">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="../pics/iced_tea.png" alt="iced_tea">
+                <h3>iced_tea</h3>
+                <p>RS170 / 1L</p>
+                <button class="btn-secondary" onclick="buyNow('iced_tea', 170)">Buy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            const quantity = document.getElementById('quantity').value;
+            alert(`${quantity} x ${productName} has been added to your cart at RS${(price * quantity).toFixed(2)}.`);
+        }
+
+        function addToCartAndNavigate(productName, price, productPage) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ productName, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = productPage;
+        }
+    </script>
+</body>
+</html>
