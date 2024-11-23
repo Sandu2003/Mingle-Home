@@ -9,11 +9,9 @@
 <body>
 
     <header class="header">
-        <div class="logo"><img src="../pics/Mingle-m.png" alt="logo" ></div>
+        <div class="logo"><a href="../home.html"><img src="../pics/Mingle-m.png" alt="logo" ></a></div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="recipes.html">Recipes</a>
-            <a href="mart.html" class="active">Mart</a>
+            <a href="../home.html">Home</a>
             <a href="cart.html">Cart</a>
         </nav>
         <div class="search-container">
@@ -24,6 +22,12 @@
     </header>
     <section class="veg" >
 <div class="product-carousel">
+    <div class="product-card">
+        <a href="../product/Producr_v.html"><img src="../pics/carrots.webp" alt="Carrots"></a>
+        <h3>Carrot</h3>
+        <p>RS 300.00 / kg</p>
+        <button class="btn-secondary" onclick="addToCart('Carrot', 300)">Add to Cart</button>
+    </div>
     <div class="product-card">
         <img src="../pics/cauli.webp" alt="Cauliflower">
         <h3>Organic Cauliflower</h3>

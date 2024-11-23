@@ -180,3 +180,46 @@ footer p {
 .social-links img:hover {
     transform: scale(1.1);
 }
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .Section-Button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .large-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        top: 60%;
+        transform: translate(-50%, -60%);
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    .Section-Button {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .large-text {
+        font-size: 1.5rem;
+    }
+}
