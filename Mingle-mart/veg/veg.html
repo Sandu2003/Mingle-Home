@@ -7,18 +7,17 @@
 <link rel="stylesheet" href="../css/category.css">
 </head>
 <body>
-
     <header class="header">
         <div class="logo"><a href="../home.html"><img src="../pics/Mingle-m.png" alt="logo" ></a></div>
-        <nav>
-            <a href="../home.html">Home</a>
-            <a href="cart.html">Cart</a>
-        </nav>
+
         <div class="search-container">
             <input type="text" id="searchInput" class="search-input" placeholder="Search...">
             <button type="button" class="search-btn" onclick="searchFunction()">🔍</button> &nbsp
             <button type="button" class="reset-btn" onclick="resetSearch()">🗘</button>
         </div>
+        <nav>
+            <a href="../home.html">Home</a>
+        </nav>
         
     </header>
     <section class="cate" >
@@ -31,10 +30,10 @@
     </div>
 
     <div class="product-card">
-        <a href="../product/Product_v1.html"><img src="../pics/cauli.webp" alt="Cauliflower"></a>
+        <img src="../pics/cauli.webp" alt="Cauliflower">
         <h3>Organic Cauliflower</h3>
         <p>RS 300.00 / kg</p>
-        <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Cauliflower', 300, '../product/Product_v1.html')">Buy</button>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Cauliflower', 300, '../product/Producr_v.html')">Buy</button>
     </div>
     
     
