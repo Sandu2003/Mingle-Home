@@ -54,25 +54,25 @@
                 <img src="../pics/soda.avif" alt="Soda">
                 <h3>Soda</h3>
                 <p>RS180 / 1L</p>
-                <button class="btn-secondary" onclick="buyNow('Soda', 180)">Buy</button>
+                <button class="btn-secondary" onclick="buyNow('Soda', 180,'soda.html')">Buy</button>
             </div>
             <div class="product-card">
                 <img src="../pics/egb.webp" alt="Elephant House Ginger Beer">
                 <h3>Elephant House Ginger Beer</h3>
                 <p>RS250 / 1L</p>
-                <button class="btn-secondary" onclick="buyNow('Elephant House Ginger Beer', 250)">Buy</button>
+                <button class="btn-secondary" onclick="buyNow('Elephant House Ginger Beer', 250,'EGB_D.html')">Buy</button>
             </div>
             <div class="product-card">
                 <img src="../pics/pepsi.jpg" alt="Pepsi">
                 <h3>Pepsi</h3>
                 <p>RS150 / 1L</p>
-                <button class="btn-secondary" onclick="buyNow('Pepsi', 150)">Buy</button>
+                <button class="btn-secondary" onclick="buyNow('Pepsi', 150,'pepsi.html')">Buy</button>
             </div>
             <div class="product-card">
                 <img src="../pics/grape.jpeg" alt="grape_juice">
                 <h3>grape_juice</h3>
                 <p>RS170 / 1L</p>
-                <button class="btn-secondary" onclick="buyNow('grape_juice', 170)">Buy</button>
+                <button class="btn-secondary" onclick="buyNow('grape_juice', 170,'grape.html')">Buy</button>
             </div>
         </div>
     </section>
@@ -94,9 +94,16 @@
     </footer>
 
     <script>
-        function buyNow(productName, price) {
-            const quantity = document.getElementById('quantity') ? document.getElementById('quantity').value : 1;
-            alert(`${quantity} x ${productName} has been purchased at RS${(price * quantity).toFixed(2)}.`);
+        function addToCart(productName, price) {
+            const quantity = document.getElementById('quantity').value;
+            alert(`${quantity} x ${productName} has been added to your cart at RS${(price * quantity).toFixed(2)}.`);
+        }
+
+        function addToCartAndNavigate(productName, price, productPage) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ productName, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = productPage;
         }
     </script>
 </body>

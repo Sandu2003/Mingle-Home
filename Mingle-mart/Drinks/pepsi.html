@@ -95,9 +95,16 @@
     </footer>
 
     <script>
-        function buyNow(productName, price) {
-            const quantity = document.getElementById('quantity') ? document.getElementById('quantity').value : 1;
-            alert(`${quantity} x ${productName} has been purchased at RS${(price * quantity).toFixed(2)}.`);
+        function addToCart(productName, price) {
+            const quantity = document.getElementById('quantity').value;
+            alert(`${quantity} x ${productName} has been added to your cart at RS${(price * quantity).toFixed(2)}.`);
+        }
+
+        function addToCartAndNavigate(productName, price, productPage) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ productName, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = productPage;
         }
     </script>
 </body>

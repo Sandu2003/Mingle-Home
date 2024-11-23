@@ -71,7 +71,7 @@
                 <img src="../pics/egb.webp" alt="Elephant House Ginger Beer">
                 <h3>Elephant House Ginger Beer</h3>
                 <p>RS250 / 1L</p>
-                <button class="btn-secondary" onclick="addToCartAndNavigate('Elephant House Ginger Beer', 250, './egb.html')">Buy</button>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Elephant House Ginger Beer', 250, './EGB_D.html')">Buy</button>
             </div>
         </div>
     </section>
@@ -94,35 +94,13 @@
 
     <script>
         function addToCart(productName, price) {
-            const quantityInput = document.getElementById('quantity');
-            const quantity = parseInt(quantityInput.value, 10);
-            if (quantity < 1) {
-                alert("Please enter a valid quantity!");
-                return;
-            }
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.productName === productName);
-
-            if (existingProduct) {
-                existingProduct.quantity += quantity;
-            } else {
-                cart.push({ productName, price, quantity });
-            }
-            
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${quantity} x ${productName} added to your cart!`);
+            const quantity = document.getElementById('quantity').value;
+            alert(`${quantity} x ${productName} has been added to your cart at RS${(price * quantity).toFixed(2)}.`);
         }
 
         function addToCartAndNavigate(productName, price, productPage) {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.productName === productName);
-
-            if (existingProduct) {
-                existingProduct.quantity += 1; // Default to 1 for related products
-            } else {
-                cart.push({ productName, price, quantity: 1 });
-            }
-
+            cart.push({ productName, price });
             localStorage.setItem('cart', JSON.stringify(cart));
             window.location.href = productPage;
         }
