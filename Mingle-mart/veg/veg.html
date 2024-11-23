@@ -16,7 +16,8 @@
         </nav>
         <div class="search-container">
             <input type="text" id="searchInput" class="search-input" placeholder="Search...">
-            <button type="button" class="search-btn" onclick="searchFunction()">🔍</button>
+            <button type="button" class="search-btn" onclick="searchFunction()">🔍</button> &nbsp
+            <button type="button" class="reset-btn" onclick="resetSearch()">🗘</button>
         </div>
         
     </header>
@@ -26,13 +27,14 @@
         <a href="../product/Producr_v.html"><img src="../pics/carrots.webp" alt="Carrots"></a>
         <h3>Carrot</h3>
         <p>RS 300.00 / kg</p>
-        <button class="btn-secondary" onclick="addToCart('Carrot', 300)">Add to Cart</button>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Carrot', 300, '../product/Producr_v.html')">Buy</button>
     </div>
+
     <div class="product-card">
         <img src="../pics/cauli.webp" alt="Cauliflower">
         <h3>Organic Cauliflower</h3>
         <p>RS 300.00 / kg</p>
-        <button class="btn-secondary" onclick="addToCart('Organic Cauliflower', 300)">Add to Cart</button>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Organic Cauliflower', 300)">Add to Cart</button>
     </div>
     
     
@@ -116,6 +118,19 @@
 </div>
 </section>
 <script>
+   
+    function addToCart(productName, productPrice) {
+       
+        console.log(`Added ${productName} for Rs ${productPrice} to the cart.`);
+    }
+
+   
+    function addToCartAndNavigate(productName, productPrice, redirectUrl) {
+        addToCart(productName, productPrice); 
+        window.location.href = redirectUrl;  
+    }
+
+   
     function searchFunction() {
         const query = document.getElementById('searchInput').value;
         if (query) {
@@ -124,6 +139,39 @@
             alert("Please enter a search term!");
         }
     }
+
+    function searchFunction() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim(); 
+    const products = document.querySelectorAll('.product-card'); 
+    let hasResults = false; 
+
+    products.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase(); 
+
+        if (productName.includes(query)) {
+            product.style.display = 'block'; 
+            hasResults = true;
+        } else {
+            product.style.display = 'none'; 
+        }
+    });
+
+    if (!query) {
+       
+        products.forEach(product => (product.style.display = 'block'));
+        alert("Please enter a search term!");
+        return;
+    }
+
+    if (!hasResults) {
+        alert("No products found matching your search.");
+    }
+}
+function resetSearch() {
+    const products = document.querySelectorAll('.product-card');
+    products.forEach(product => (product.style.display = 'block')); 
+    document.getElementById('searchInput').value = ''; 
+}
 </script>
 </body>
 <footer>

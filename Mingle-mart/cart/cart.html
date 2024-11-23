@@ -16,28 +16,39 @@
                 <div class="cart-item-details">
                     <h2 class="cart-item-name">Carrort</h2>
                     <p class="cart-item-description">Bright, crisp, and packed with natural sweetness, our fresh carrots are the perfect choice for your kitchen. Whether you’re looking to enhance your meals or enjoy a healthy snack, our carrots deliver quality and flavor in every bite.</p>
-                    <p class="cart-item-price">RS200.00</p>
+                    <p class="cart-item-price">Rs:200.00</p>
                 </div>
                 <div class="cart-item-quantity">
                     <button class="quantity-btn" onclick="decreaseQuantity(1)">-</button>
                     <input type="number" value="1" min="1" id="quantity1" class="quantity-input">
-                    <button class="quantity-btn" onclick="increaseQuantity(1)">+</button>
+                    <button class="quantity-btn" onclick="increaseQuantity(1)">+</button> 
                 </div>
-                <button class="remove-btn">Remove</button>
+               
+                <button class="remove-btn" onclick="checkCart(1, 200)">Add</button>
+                
+
             </div>
 
-            <!-- Add more cart items here -->
+            
 
         </div>
-        <div class="cart-summary">
+        <!-- <div class="cart-summary">
             <h2>Cart Summary</h2>
             <p>Total Items: <span id="total-items">1</span></p>
             <p>Total Price: <span id="total-price">RS200.00</span></p>
             <button class="checkout-btn" onclick="showSuccessMessage()">Proceed to Checkout</button>
             <p id="success-message" class="success-message" style="display: none;"></p>
+        </div> -->
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">1</span></p>
+            <p>Total Price: <span id="total-price">Rs:200.00</span></p>
+            <button class="checkout-btn" onclick="showSuccessMessage()">Proceed to Checkout</button>
+            <button class="remove-btn" onclick="resetCart()">Reset</button>
+            <p id="success-message" class="success-message" style="display: none;"></p>
         </div>
-    
     </div>
+
 
     <script src="scripts.js"></script>
 </body>
