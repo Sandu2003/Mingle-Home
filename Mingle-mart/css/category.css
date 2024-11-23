@@ -69,13 +69,14 @@ a {
 .header a:hover {
     color:#FFBA08;
 }
-.veg .product-carousel {
+.cate .product-carousel {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding: 20px;
     flex-wrap: wrap;
     scroll-snap-type: x mandatory;
+    text-align: center;
 }
 
 .product-card {
@@ -84,7 +85,7 @@ a {
 }
 
 .product-card img {
-    width: 350px;
+    width: 300px;
     height: auto;
     border-radius: 8px;
 }
@@ -243,6 +244,6 @@ footer p {
     }
 }
 
-.veg {
+.cate {
     flex: 1; 
 }
