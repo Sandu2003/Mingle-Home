@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Mingle-Mart</title>
+<link rel="stylesheet" href="../css/category.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="../home.html"><img src="../pics/Mingle-m.png" alt="logo" ></a></div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+            <button type="button" class="search-btn" onclick="searchFunction()">🔍</button> &nbsp
+            <button type="button" class="reset-btn" onclick="resetSearch()">🗘</button>
+        </div>
+        <nav>
+            <a href="../home.html">Home</a>
+        </nav>
+        
+    </header>
+    <section class="cate" >
+<div class="product-carousel">
+    <div class="product-card">
+        <a href="../product/Product_p.html"><img src="../pics/carrots.webp" alt="Apple"></a>
+        <h3>Apple</h3>
+        <p>RS 200.00 / kg</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Apple', 200, '../product/Product_p.html')">Buy</button>
+    </div>
+
+    <div class="product-card">
+        <a href="../product/Product_p1.html"><img src="../pics/cauli.webp" alt="Banana"></a>
+        <h3>Banana</h3>
+        <p>RS 200.00 / kg</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Banana', 200, '../product/Product_p1.html')">Buy</button>
+    </div>
+    
+    
+    <div class="product-card">
+        <a href="../product/Product_p2.html"><img src="../pics/broco.webp" alt="Oranges"></a>
+        <h3>Oranges</h3>
+        <p>RS200.00 / kg</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Oranges', 200,'../product/Product_p2.html')">Buy</button>
+    </div>
+    
+    <div class="product-card">
+        <a href="../product/Product_p3.html"><img src="../pics/SPIN.webp" alt="Strawberry"></a>
+        <h3>Strawberry</h3>
+        <p>RS200.00 / kg</p>
+        <button class="btn-secondary" onclick="addToCartAndNavigate('Strawberry', 200,'../product/Product_p3.html')">Buy</button>
+    </div>
+    
+    
+</div>
+</section>
+<script>
+   
+    function addToCart(productName, productPrice) {
+       
+        console.log(`Added ${productName} for Rs ${productPrice} to the cart.`);
+    }
+
+   
+    function addToCartAndNavigate(productName, productPrice, redirectUrl) {
+        addToCart(productName, productPrice); 
+        window.location.href = redirectUrl;  
+    }
+
+   
+    function searchFunction() {
+        const query = document.getElementById('searchInput').value;
+        if (query) {
+            window.location.href = `https://yourwebsite.com/search?q=${query}`;
+        } else {
+            alert("Please enter a search term!");
+        }
+    }
+
+    function searchFunction() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim(); 
+    const products = document.querySelectorAll('.product-card'); 
+    let hasResults = false; 
+
+    products.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase(); 
+
+        if (productName.includes(query)) {
+            product.style.display = 'block'; 
+            hasResults = true;
+        } else {
+            product.style.display = 'none'; 
+        }
+    });
+
+    if (!query) {
+       
+        products.forEach(product => (product.style.display = 'block'));
+        alert("Please enter a search term!");
+        return;
+    }
+
+    if (!hasResults) {
+        alert("No products found matching your search.");
+    }
+}
+function resetSearch() {
+    const products = document.querySelectorAll('.product-card');
+    products.forEach(product => (product.style.display = 'block')); 
+    document.getElementById('searchInput').value = ''; 
+}
+</script>
+</body>
+<footer>
+    <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+    
+
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+        </a>
+    </div>
+</footer>
