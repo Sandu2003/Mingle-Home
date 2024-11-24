@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Mingle World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f5f7;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #24292f;
+            color: white;
+            padding: 15px 30px;
+            margin-left: 250px;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .header .logo a {
+            text-decoration: none;
+            color: white;
+        }
+        .header .user-info {
+            font-size: 1rem;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2d333b;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover {
+            background-color: #444c56;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .content {
+            margin-left: 300px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="../Home_page/Home_page.html">Mingle World</a></div>
+        <div class="user-info">Welcome, Admin</div>
+        
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Manage Recipes</a></li>
+            <li><a href="#">Manage Ingredients</a></li>
+            <li><a href="#">Manage Orders</a></li>
+            <li><a href="#">User Management</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        <h1>Admin Dashboard</h1>
+        <div class="grid">
+            <div class="card">
+                <h2>Total Recipes</h2>
+                <p>250</p>
+            </div>
+            <div class="card">
+                <h2>Total Ingredients</h2>
+                <p>1,500</p>
+            </div>
+            <div class="card">
+                <h2>Pending Orders</h2>
+                <p>85</p>
+            </div>
+            <div class="card">
+                <h2>Registered Users</h2>
+                <p>5,200</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cart-container">
+        <h1 class="cart-title">Shopping Cart</h1>
+        <div class="cart-items">
+            
+            <div class="cart-item">
+                <img src="../pics/cumin.jpeg" alt="cumin" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h2 class="cart-item-name">cumin</h2>
+                    <p class="cart-item-description">Cumin is a spice with a warm, earthy flavor commonly used in a variety of cuisines, especially in Indian, Middle Eastern, and Mexican dishes. It's known for its strong aroma and health benefits.
+                    </p>
+                    <p class="cart-item-price">RS130 / 100g</p>
+                </div>
+                <div class="cart-item-quantity">
+                    <button class="quantity-btn" onclick="decreaseQuantity(1)">-</button>
+                    <input type="number" value="1" min="1" id="quantity1" class="quantity-input">
+                    <button class="quantity-btn" onclick="increaseQuantity(1)">+</button> &nbsp
+                </div>
+                <button class="remove-btn" onclick="addToCart('Cumin',130)">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: <span id="total-price">Rs:0.00</span></p>
+            <button class="checkout-btn" onclick="showSuccessMessage()">Proceed to Checkout</button>
+            <button class="remove-btn" onclick="resetCart()">Reset Cart</button>
+            <p id="success-message" class="success-message" style="display: none;"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
