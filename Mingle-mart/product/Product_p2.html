@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Mingle-Mart</title>
+<link rel="stylesheet" href="../css/product_p.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><img src="../pics/Mingle-m.png" alt="logo" ></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="mart.html" class="active">Mart</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <section class="product-detail">
+        <div class="product-container">
+            <!-- Product Image Gallery -->
+            <div class="product-images">
+                <img src="images/product1-main.jpg" alt="Product Image" class="main-image">
+                <div class="image-thumbnails">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1 class="product-name"> Fresh Oranges</h1>
+                <p class="product-price">RS.200.00/ kg</p>
+                <p class="product-description">
+                    These juicy and sweet organic oranges are perfect for snacking or adding to your favorite recipes. Rich in Vitamin C, they are a healthy and refreshing choice.
+                </p>
+            
+                <div class="product-actions">
+                    <a href="../cart/cartp2.html"><button class="btn-primary" onclick="addToCart('Organic Fresh Oranges', 200.00)">Add to Cart</button></a>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="../product/Product_p.html"><img src="../pics/carrots.webp" alt="Apple"></a>
+                <h3>Apple</h3>
+                <p>RS 200.00 / kg</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Apple', 200, '../product/Product_p.html')">Buy</button>
+            </div>
+            <div class="product-card">
+                <a href="../product/Product_p1.html"><img src="../pics/banana.webp" alt="Banana"></a>
+                <h3>Banana</h3>
+                <p>RS 200.00 / kg</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Banana', 200, '../product/Product_p1.html')">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <a href="../product/Product_p3.html"><img src="../pics/SPIN.webp" alt="Strawberry"></a>
+                <h3>Strawberry</h3>
+                <p>RS200.00 / kg</p>
+                <button class="btn-secondary" onclick="addToCartAndNavigate('Strawberry', 200,'../product/Product_p3.html')">Buy</button>
+            </div>
+            
+            
+            
+            <!-- Add more related products here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mingle-Bites. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="../pics/facebook-new.png" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../pics/twitter.png" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../pics/insta.png" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <script>function addToCart(productName, price) {
+        const quantity = document.getElementById('quantity').value;
+        alert(`${quantity} x ${productName} has been added to your cart at $${(price * quantity).toFixed(2)}.`);
+    }
+    </script>
+</body>
+</html>
