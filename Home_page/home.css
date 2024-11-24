@@ -37,7 +37,10 @@ body, html {
     color: #ffffff;
     font-weight: 500;
 }
-
+.navbar a{
+    text-decoration: none;
+    color: #FFBA08;
+}
 .hero {
     position: relative;
     height: 100vh;

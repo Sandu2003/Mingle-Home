@@ -1,24 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 .cart-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 20px auto;
+    background-color: #fff;
     padding: 20px;
-    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cart-title {
     text-align: center;
-    font-size: 24px;
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #5a5a5a;
 }
 
 .cart-items {
@@ -27,112 +33,133 @@ body {
 
 .cart-item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px;
     border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .cart-item-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .cart-item-details {
     flex: 1;
-    margin-left: 15px;
+    padding-left: 20px;
 }
 
 .cart-item-name {
-    font-size: 18px;
-    margin: 0;
+    font-size: 1.2rem;
     color: #333;
 }
 
 .cart-item-description {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #777;
+    margin-top: 5px;
 }
 
 .cart-item-price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin-top: 5px;
 }
 
 .cart-item-quantity {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .quantity-btn {
-    background: #4CAF50;
-    color: white;
-    border: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
     padding: 5px 10px;
+    font-size: 1.1rem;
     cursor: pointer;
     border-radius: 4px;
 }
 
-.quantity-btn:hover {
-    background: #45a049;
-}
-
 .quantity-input {
-    width: 40px;
+    width: 50px;
     text-align: center;
-    margin: 0 5px;
     border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 1rem;
     border-radius: 4px;
 }
 
 .remove-btn {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.remove-btn:hover {
-    background: #c0392b;
-}
-
-.cart-summary {
-    text-align: center;
-    padding: 20px;
-    background: #f8f8f8;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.cart-summary h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.checkout-btn {
-    background: #4CAF50;
+    background-color: #ff6347;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
-    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #e5533b;
+}
+
+.cart-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cart-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cart-summary p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
 }
 
 .checkout-btn:hover {
-    background: #45a049;
+    background-color: #45a049;
 }
+
 .success-message {
-    margin-top: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #28a745;
-    font-weight: bold;
-    text-align: center;
+    margin-top: 10px;
+}
+
+.reset-btn {
+    background-color: #ffb84d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #e6952f;
 }

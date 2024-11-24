@@ -108,3 +108,51 @@ function updateCartCount() {
         cartCountElement.textContent = totalItems; // Update cart count dynamically
     }
 }
+function addToCart(productName, price) {
+    const quantity = document.getElementById('quantity').value;
+    alert(`${quantity} x ${productName} has been added to your cart at RS${(price * quantity).toFixed(2)}.`);
+}
+// Example Cart Data (You can replace this with real data, like from localStorage)
+let cart = [
+    { name: "Cardamom", quantity: 2, price: 250 },
+    { name: "Chili Powder", quantity: 1, price: 180 },
+    { name: "Cumin", quantity: 3, price: 130 }
+];
+
+// Function to show cart count on the page
+function updateCartCount() {
+    const cartCount = document.getElementById('cart-count');
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
+}
+
+// Function to show the cart popup with items
+function showCartPopup() {
+    const cartPopup = document.getElementById('cart-popup');
+    const cartItemsList = document.getElementById('cart-items-list');
+    
+    // Clear the current items in the popup
+    cartItemsList.innerHTML = '';
+
+    // Add each cart item to the popup
+    cart.forEach(item => {
+        const cartItemElement = document.createElement('p');
+        cartItemElement.textContent = `${item.name} - Quantity: ${item.quantity}`;
+        cartItemsList.appendChild(cartItemElement);
+    });
+
+    // Show the popup
+    cartPopup.style.display = 'flex';
+}
+
+// Function to close the cart popup
+function closeCartPopup() {
+    const cartPopup = document.getElementById('cart-popup');
+    cartPopup.style.display = 'none';
+}
+
+// Event listener for the cart link
+document.getElementById('cart-link').addEventListener('click', showCartPopup);
+
+// Call updateCartCount when the page loads to show the initial cart count
+window.onload = updateCartCount;
